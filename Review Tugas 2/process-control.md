@@ -13,3 +13,10 @@ Struktur data internal kernel yang mencatat berbagai informasi tentang setiap pr
 - Informasi mengenai file dan port jaringan yang dibuka oleh suatu proses
 - Pemilih proses (ID user)
 
+Thread merupakan konteks eksekusi dalam sebuah proses. Sebuah proses dapat memiliki banyak Thread, dimana semuanya membagikan ruang alamat yang sama dan resource lainnya. Thread digunakan untuk mencapai paralelisme dalma sebuah proses. Thread juga dikenal sebagai proses ringan karena mudah untuk dibuah dan dihapus daripada proses.
+
+## PID : Process ID Number
+Setiap proses diidentifikasi melalui unique Process ID Number, atau PID. PID merupakan bilangan bulat / integer yang dibuat oleh kernel pada setiap proses ketika proses dibuat. PID merujuk ke proses dalam berbeagi panggilan sistem, contohnya, untuk mengirim sinyal ke proses tersebut.
+
+## PPID : Parent Process ID Number
+
