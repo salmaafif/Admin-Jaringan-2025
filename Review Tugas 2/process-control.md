@@ -19,4 +19,22 @@ Thread merupakan konteks eksekusi dalam sebuah proses. Sebuah proses dapat memil
 Setiap proses diidentifikasi melalui unique Process ID Number, atau PID. PID merupakan bilangan bulat / integer yang dibuat oleh kernel pada setiap proses ketika proses dibuat. PID merujuk ke proses dalam berbeagi panggilan sistem, contohnya, untuk mengirim sinyal ke proses tersebut.
 
 ## PPID : Parent Process ID Number
+Setiap proses juga terkait dengan proses induk, yaitu proses yang membuatnya. Nomor ID proses induk, atau PPID, adalah PID dari proses induk. PPID digunakan untuk merujuk ke proses induk dalam berbagai panggilan sistem.
 
+### 3. UID dan EUID: ID Pengguna dan ID Pengguna Efektif
+ID pengguna, atau UID, adalah ID pengguna dari pengguna yang memulai proses. ID pengguna efektif, atau EUID, adalah ID pengguna yang digunakan proses untuk menentukan sumber daya apa yang dapat diakses oleh proses.
+
+## Siklus Hidup Proses
+Untuk membuat proses baru, sebuah proses menyalin dirinya sendiri dengan panggilan sistem fork. Fork membuat salinan dari proses asli, dan salinan itu sebagian besar identik dengan induknya. Proses baru memiliki PID yang berbeda dan memiliki informasi akuntansi sendiri.
+
+### 1. Sinyal
+Sinyal adalah cara untuk mengirim notifikasi ke sebuah proses. Mereka digunakan untuk memberi tahu proses bahwa suatu peristiwa tertentu telah terjadi. Ada sekitar tiga puluh jenis sinyal yang berbeda yang didefinisikan dan digunakan dengan berbagai cara.
+
+### 2. Perintah kill: Mengirim Sinyal
+Perintah kill paling sering digunakan untuk menghentikan sebuah proses. Kill dapat mengirim sinyal apa pun, tetapi secara default mengirim TERM. Kill dapat digunakan oleh pengguna biasa pada proses mereka sendiri atau oleh root pada proses mana pun.
+
+## Monitoring Proses
+Perintah ps adalah alat utama administrator sistem untuk memantau proses. Ps dapat menunjukkan PID, UID, prioritas, dan terminal kontrol dari proses. Anda dapat memperoleh gambaran berguna tentang sistem dengan menjalankan ps aux.
+
+### Proses Berkala
+Daemon cron adalah alat tradisional untuk menjalankan perintah pada jadwal yang telah ditentukan. Ini mulai berjalan saat sistem boot dan berjalan selama sistem aktif.
