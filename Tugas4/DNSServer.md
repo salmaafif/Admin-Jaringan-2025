@@ -8,6 +8,7 @@ Menggunakan perintah `apt -y install bind9 bund9utils`
 Menggunakan perintah `vi /etc/bind/named.conf`
 
 ![image](https://github.com/user-attachments/assets/9fe31b2b-8719-4a3e-a29e-63792673fd1a)
+
 Kemudian mengaturnya di `/etc/bind/named.conf.internal-zones`
 
 ![image](https://github.com/user-attachments/assets/71ec6029-998a-4567-8164-2ee130d5ac5c)
