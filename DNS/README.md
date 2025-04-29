@@ -1,5 +1,9 @@
 # Menyambungkan VM NoGUI dan GUI
 
+## Topologi
+![image](https://github.com/user-attachments/assets/682bf163-37ef-4e5d-a37b-a6d5f6ad24ed)
+Topologi ini menunjukkan dua VM yang terhubung lewat jaringan internal. VM 1 bertindak sebagai gateway dengan IP 192.168.200.1 dan terhubung ke internet melalui bridge adapter. VM 2 berperan sebagai client dengan IP 192.168.200.10/24, yang hanya terhubung ke VM 1. Agar VM 2 bisa mengakses internet, VM 1 harus mengaktifkan IP forwarding dan NAT. Singkatnya, semua koneksi dari VM 2 akan lewat VM 1 sebelum ke internet.
+
 ## VM1 (NoGUI)
 1. Set interface
    - Adapter 1 = Bridge Adapter
@@ -35,5 +39,7 @@
    - Address = 192.168.200.2
    - Netmask = 255.255.255.0
    - Gateway = 192.168.200.1
+     ![image](https://github.com/user-attachments/assets/755e9b64-0bb1-4f3a-b49d-ea0dd70480ee)
+
 3. DNS
    - 192.168.200.1, 1.1.1.1
